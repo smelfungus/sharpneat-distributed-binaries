@@ -1,0 +1,1376 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SharpNeat.Tasks</name>
+    </assembly>
+    <members>
+        <member name="T:SharpNeat.Tasks.BinaryElevenMultiplexer.BinaryElevenMultiplexerEvaluationScheme">
+            <summary>
+            Evaluation scheme for the Binary 11-Multiplexer task.
+            </summary>
+        </member>
+        <member name="P:SharpNeat.Tasks.BinaryElevenMultiplexer.BinaryElevenMultiplexerEvaluationScheme.InputCount">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.BinaryElevenMultiplexer.BinaryElevenMultiplexerEvaluationScheme.OutputCount">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.BinaryElevenMultiplexer.BinaryElevenMultiplexerEvaluationScheme.IsDeterministic">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.BinaryElevenMultiplexer.BinaryElevenMultiplexerEvaluationScheme.FitnessComparer">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.BinaryElevenMultiplexer.BinaryElevenMultiplexerEvaluationScheme.NullFitness">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.BinaryElevenMultiplexer.BinaryElevenMultiplexerEvaluationScheme.EvaluatorsHaveState">
+            <inheritdoc/>
+        </member>
+        <member name="M:SharpNeat.Tasks.BinaryElevenMultiplexer.BinaryElevenMultiplexerEvaluationScheme.CreateEvaluator">
+            <inheritdoc/>
+        </member>
+        <member name="M:SharpNeat.Tasks.BinaryElevenMultiplexer.BinaryElevenMultiplexerEvaluationScheme.TestForStopCondition(SharpNeat.Evaluation.FitnessInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="T:SharpNeat.Tasks.BinaryElevenMultiplexer.BinaryElevenMultiplexerEvaluator">
+             <summary>
+             Evaluator for the Binary 11-Multiplexer task.
+            
+             Three inputs supply a binary number between 0 and 7; this number selects one of the
+             further 8 inputs (eleven inputs in total). The correct response is the selected input's
+             input signal (0 or 1).
+            
+             Evaluation consists of querying the provided black box for all possible input combinations (2^11 = 2048).
+             </summary>
+        </member>
+        <member name="M:SharpNeat.Tasks.BinaryElevenMultiplexer.BinaryElevenMultiplexerEvaluator.Evaluate(SharpNeat.IBlackBox{System.Double})">
+            <summary>
+            Evaluate the provided black box against the Binary 11-Multiplexer task,
+            and return its fitness score.
+            </summary>
+            <param name="box">The black box to evaluate.</param>
+            <returns>A new instance of <see cref="T:SharpNeat.Evaluation.FitnessInfo"/>.</returns>
+        </member>
+        <member name="T:SharpNeat.Tasks.BinaryElevenMultiplexer.BinaryElevenMultiplexerExperimentFactory">
+            <summary>
+            A factory for creating instances of <see cref="T:SharpNeat.Experiments.INeatExperiment`1"/> for the Binary 11-multiplexer task.
+            </summary>
+        </member>
+        <member name="P:SharpNeat.Tasks.BinaryElevenMultiplexer.BinaryElevenMultiplexerExperimentFactory.Id">
+            <inheritdoc/>
+        </member>
+        <member name="M:SharpNeat.Tasks.BinaryElevenMultiplexer.BinaryElevenMultiplexerExperimentFactory.CreateExperiment(System.IO.Stream)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SharpNeat.Tasks.BinaryElevenMultiplexer.BinaryElevenMultiplexerExperimentFactory.CreateExperimentSinglePrecision(System.IO.Stream)">
+            <inheritdoc/>
+        </member>
+        <member name="T:SharpNeat.Tasks.BinarySixMultiplexer.BinarySixMultiplexerEvaluationScheme">
+            <summary>
+            Evaluation scheme for the Binary 6-Multiplexer task.
+            </summary>
+        </member>
+        <member name="P:SharpNeat.Tasks.BinarySixMultiplexer.BinarySixMultiplexerEvaluationScheme.InputCount">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.BinarySixMultiplexer.BinarySixMultiplexerEvaluationScheme.OutputCount">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.BinarySixMultiplexer.BinarySixMultiplexerEvaluationScheme.IsDeterministic">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.BinarySixMultiplexer.BinarySixMultiplexerEvaluationScheme.FitnessComparer">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.BinarySixMultiplexer.BinarySixMultiplexerEvaluationScheme.NullFitness">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.BinarySixMultiplexer.BinarySixMultiplexerEvaluationScheme.EvaluatorsHaveState">
+            <inheritdoc/>
+        </member>
+        <member name="M:SharpNeat.Tasks.BinarySixMultiplexer.BinarySixMultiplexerEvaluationScheme.CreateEvaluator">
+            <inheritdoc/>
+        </member>
+        <member name="M:SharpNeat.Tasks.BinarySixMultiplexer.BinarySixMultiplexerEvaluationScheme.TestForStopCondition(SharpNeat.Evaluation.FitnessInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="T:SharpNeat.Tasks.BinarySixMultiplexer.BinarySixMultiplexerEvaluator">
+             <summary>
+             Evaluator for the Binary 6-Multiplexer task.
+            
+             Two inputs supply a binary number between 0 and 3; this number selects one of the
+             further 4 inputs (six inputs in total). The correct response is the selected input's
+             input signal (0 or 1).
+            
+             Evaluation consists of querying the provided black box for all possible input combinations (2^6 = 64).
+             </summary>
+        </member>
+        <member name="M:SharpNeat.Tasks.BinarySixMultiplexer.BinarySixMultiplexerEvaluator.Evaluate(SharpNeat.IBlackBox{System.Double})">
+            <summary>
+            Evaluate the provided black box against the Binary 6-Multiplexer task,
+            and return its fitness score.
+            </summary>
+            <param name="box">The black box to evaluate.</param>
+            <returns>A new instance of <see cref="T:SharpNeat.Evaluation.FitnessInfo"/>.</returns>
+        </member>
+        <member name="T:SharpNeat.Tasks.BinarySixMultiplexer.BinarySixMultiplexerExperimentFactory">
+            <summary>
+            A factory for creating instances of <see cref="T:SharpNeat.Experiments.INeatExperiment`1"/> for the Binary 6-multiplexer task.
+            </summary>
+        </member>
+        <member name="P:SharpNeat.Tasks.BinarySixMultiplexer.BinarySixMultiplexerExperimentFactory.Id">
+            <inheritdoc/>
+        </member>
+        <member name="M:SharpNeat.Tasks.BinarySixMultiplexer.BinarySixMultiplexerExperimentFactory.CreateExperiment(System.IO.Stream)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SharpNeat.Tasks.BinarySixMultiplexer.BinarySixMultiplexerExperimentFactory.CreateExperimentSinglePrecision(System.IO.Stream)">
+            <inheritdoc/>
+        </member>
+        <member name="T:SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluationScheme">
+            <summary>
+            Evaluation scheme for the Binary 3-Multiplexer task.
+            </summary>
+        </member>
+        <member name="P:SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluationScheme.InputCount">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluationScheme.OutputCount">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluationScheme.IsDeterministic">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluationScheme.FitnessComparer">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluationScheme.NullFitness">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluationScheme.EvaluatorsHaveState">
+            <inheritdoc/>
+        </member>
+        <member name="M:SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluationScheme.CreateEvaluator">
+            <inheritdoc/>
+        </member>
+        <member name="M:SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluationScheme.TestForStopCondition(SharpNeat.Evaluation.FitnessInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="T:SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluator">
+             <summary>
+             Evaluator for the Binary 3-Multiplexer task.
+            
+             One binary input selects which of two other binary inputs to output.
+             The correct response is the selected input's input signal (0 or 1).
+            
+             Evaluation consists of querying the provided black box for all possible input combinations (2^3 = 8).
+             </summary>
+        </member>
+        <member name="M:SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluator.Evaluate(SharpNeat.IBlackBox{System.Double})">
+            <summary>
+            Evaluate the provided black box against the Binary 3-Multiplexer task,
+            and return its fitness score.
+            </summary>
+            <param name="box">The black box to evaluate.</param>
+            <returns>A new instance of <see cref="T:SharpNeat.Evaluation.FitnessInfo"/>.</returns>
+        </member>
+        <member name="T:SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerExperimentFactory">
+            <summary>
+            A factory for creating instances of <see cref="T:SharpNeat.Experiments.INeatExperiment`1"/> for the Binary 3-multiplexer task.
+            </summary>
+        </member>
+        <member name="P:SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerExperimentFactory.Id">
+            <inheritdoc/>
+        </member>
+        <member name="M:SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerExperimentFactory.CreateExperiment(System.IO.Stream)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerExperimentFactory.CreateExperimentSinglePrecision(System.IO.Stream)">
+            <inheritdoc/>
+        </member>
+        <member name="T:SharpNeat.Tasks.CartPole.DoublePole.CartDoublePoleEvaluationScheme">
+            <summary>
+            Evaluation scheme for the cart and pole balancing task, with two poles.
+            </summary>
+        </member>
+        <member name="P:SharpNeat.Tasks.CartPole.DoublePole.CartDoublePoleEvaluationScheme.InputCount">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.CartPole.DoublePole.CartDoublePoleEvaluationScheme.OutputCount">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.CartPole.DoublePole.CartDoublePoleEvaluationScheme.IsDeterministic">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.CartPole.DoublePole.CartDoublePoleEvaluationScheme.FitnessComparer">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.CartPole.DoublePole.CartDoublePoleEvaluationScheme.NullFitness">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.CartPole.DoublePole.CartDoublePoleEvaluationScheme.EvaluatorsHaveState">
+            <inheritdoc/>
+        </member>
+        <member name="M:SharpNeat.Tasks.CartPole.DoublePole.CartDoublePoleEvaluationScheme.CreateEvaluator">
+            <inheritdoc/>
+        </member>
+        <member name="M:SharpNeat.Tasks.CartPole.DoublePole.CartDoublePoleEvaluationScheme.TestForStopCondition(SharpNeat.Evaluation.FitnessInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="T:SharpNeat.Tasks.CartPole.DoublePole.CartDoublePoleEvaluator">
+             <summary>
+             Evaluator for the cart and double pole balancing task.
+             </summary>
+             <remarks>
+             This task is solvable by SharpNEAT, but not on every run. This is likely due to 'deceptive' local maxima in the fitness landscape.
+             As such this task would be a reasonable choice for research into addressing the problem of fitness landscape deception.
+            
+             This task can be made more difficult by not providing the velocity information (the cart and the two pole angular velocities)
+             to the neural network. Difficulty can be further increases by making the two pole lengths increasingly similar, with the task
+             becoming impossible when the poles have the same length.
+            
+             As things stand the problem is difficult enough in its current form, therefore we provide velocity inputs and define two very
+             different pole lengths.
+             </remarks>
+        </member>
+        <member name="M:SharpNeat.Tasks.CartPole.DoublePole.CartDoublePoleEvaluator.#ctor">
+            <summary>
+            Construct evaluator with default task arguments/variables.
+            </summary>
+            <remarks>
+            Default to 960 timesteps, or 960/16 = 60 seconds of clock time.</remarks>
+        </member>
+        <member name="M:SharpNeat.Tasks.CartPole.DoublePole.CartDoublePoleEvaluator.#ctor(System.Int32)">
+            <summary>
+            Construct evaluator with the provided task arguments/variables.
+            </summary>
+            <param name="maxTimesteps">The maximum number of timesteps to run the physics simulation for.</param>
+        </member>
+        <member name="M:SharpNeat.Tasks.CartPole.DoublePole.CartDoublePoleEvaluator.Evaluate(SharpNeat.IBlackBox{System.Double})">
+            <summary>
+            Evaluate the provided black box against the cart and double pole balancing task,
+            and return its fitness score.
+            </summary>
+            <param name="box">The black box to evaluate.</param>
+            <returns>A new instance of <see cref="T:SharpNeat.Evaluation.FitnessInfo"/>.</returns>
+        </member>
+        <member name="M:SharpNeat.Tasks.CartPole.DoublePole.CartDoublePoleEvaluator.RunTrial(SharpNeat.IBlackBox{System.Double},System.Single,System.Single,System.Single)">
+            <summary>
+            Run a single cart-pole simulation/trial on the given black box, and with the given initial model state.
+            </summary>
+            <param name="box">The black box (neural net) to evaluate.</param>
+            <param name="cartPos">Cart position on the track.</param>
+            <param name="poleAngle1">Pole 1 angle in radians.</param>
+            <param name="poleAngle2">Pole 2 angle in radians.</param>
+            <returns>Fitness score.</returns>
+        </member>
+        <member name="T:SharpNeat.Tasks.CartPole.DoublePole.CartDoublePoleExperimentFactory">
+            <summary>
+            A factory for creating instances of <see cref="T:SharpNeat.Experiments.INeatExperiment`1"/> for the cart and double pole balancing task.
+            </summary>
+        </member>
+        <member name="P:SharpNeat.Tasks.CartPole.DoublePole.CartDoublePoleExperimentFactory.Id">
+            <inheritdoc/>
+        </member>
+        <member name="M:SharpNeat.Tasks.CartPole.DoublePole.CartDoublePoleExperimentFactory.CreateExperiment(System.IO.Stream)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SharpNeat.Tasks.CartPole.DoublePole.CartDoublePoleExperimentFactory.CreateExperimentSinglePrecision(System.IO.Stream)">
+            <inheritdoc/>
+        </member>
+        <member name="T:SharpNeat.Tasks.CartPole.DoublePole.CartDoublePolePhysicsRK4">
+            <summary>
+            Represents the cart-pole physical model (with two poles); providing a model state update method
+            that employs a classic 4th order Runge-Kutta to project to the state at the next timestep.
+            </summary>
+            <remarks>
+            This cart-pole physics code is based on code from https://github.com/colgreen/cartpole-physics
+            which in turn is based on the cart-pole equations from this paper:
+               "Equations of Motion for the Cart and Pole Control Task"
+               <see href="https://sharpneat.sourceforge.io/research/cart-pole/cart-pole-equations.html"/>.
+            </remarks>
+        </member>
+        <member name="F:SharpNeat.Tasks.CartPole.DoublePole.CartDoublePolePhysicsRK4.g">
+            <summary>
+            Gravitational acceleration (in m/s^2). Here g is taken to be the directionless magnitude of the acceleration
+            caused by gravity (i.e. approximately 9.8 m/s^2 for gravity on Earth). The direction of gravitational acceleration
+            is taken into account in the formulation of the equations, therefore the sign of g is positive.
+            </summary>
+        </member>
+        <member name="F:SharpNeat.Tasks.CartPole.DoublePole.CartDoublePolePhysicsRK4.m">
+            <summary>
+            Mass of pole 1 (in kilograms).
+            </summary>
+        </member>
+        <member name="F:SharpNeat.Tasks.CartPole.DoublePole.CartDoublePolePhysicsRK4.m2">
+            <summary>
+            Mass of pole 2 (in kilograms).
+            </summary>
+        </member>
+        <member name="F:SharpNeat.Tasks.CartPole.DoublePole.CartDoublePolePhysicsRK4.m_c">
+            <summary>
+            Mass of the cart (in kilograms).
+            </summary>
+        </member>
+        <member name="F:SharpNeat.Tasks.CartPole.DoublePole.CartDoublePolePhysicsRK4.l">
+            <summary>
+            Length of pole 1 (in metres). This is the full length of the pole, and not the half length as used widely
+            elsewhere in the literature.
+            </summary>
+        </member>
+        <member name="F:SharpNeat.Tasks.CartPole.DoublePole.CartDoublePolePhysicsRK4.l_hat">
+            <summary>
+            Half length of pole 1.
+            </summary>
+        </member>
+        <member name="F:SharpNeat.Tasks.CartPole.DoublePole.CartDoublePolePhysicsRK4.l2">
+            <summary>
+            Length of pole 2 (in metres). This is the full length of the pole, and not the half length as used widely
+            elsewhere in the literature.
+            </summary>
+        </member>
+        <member name="F:SharpNeat.Tasks.CartPole.DoublePole.CartDoublePolePhysicsRK4.l2_hat">
+            <summary>
+            Half length of pole 2.
+            </summary>
+        </member>
+        <member name="F:SharpNeat.Tasks.CartPole.DoublePole.CartDoublePolePhysicsRK4.mu_p">
+            <summary>
+            Coefficient of friction between the pole and the cart, i.e. friction at the pole's pivot joint.
+            </summary>
+        </member>
+        <member name="F:SharpNeat.Tasks.CartPole.DoublePole.CartDoublePolePhysicsRK4.mu_c">
+            <summary>
+            Coefficient of friction between the cart and the track.
+            </summary>
+        </member>
+        <member name="F:SharpNeat.Tasks.CartPole.DoublePole.CartDoublePolePhysicsRK4.M">
+            <summary>
+            Combined mass of the cart and the two poles.
+            </summary>
+        </member>
+        <member name="F:SharpNeat.Tasks.CartPole.DoublePole.CartDoublePolePhysicsRK4.tau">
+            <summary>
+            The timestep increment, e.g. 0.01 for 10 millisecond increments.
+            </summary>
+        </member>
+        <member name="F:SharpNeat.Tasks.CartPole.DoublePole.CartDoublePolePhysicsRK4._state">
+            <summary>
+            The model state variables are:
+             [0] x-axis coordinate of the cart (metres).
+             [1] x-axis velocity of the cart (m/s).
+             [2] Pole 1 angle (radians); deviation from the vertical. Positive is clockwise.
+             [3] Pole 1 angular velocity (radians/s). Positive is clockwise.
+             [4] Pole 2 angle (radians); deviation from the vertical. Positive is clockwise.
+             [5] Pole 2 angular velocity (radians/s). Positive is clockwise.
+            </summary>
+        </member>
+        <member name="P:SharpNeat.Tasks.CartPole.DoublePole.CartDoublePolePhysicsRK4.State">
+            <summary>
+            Get the cart-pole model state.
+            </summary>
+            <remarks>
+            The model state variables are:
+             [0] x-axis coordinate of the cart (metres).
+             [1] x-axis velocity of the cart (m/s).
+             [2] Pole 1 angle (radians); deviation from the vertical. Positive is clockwise.
+             [3] Pole 1 angular velocity (radians/s). Positive is clockwise.
+             [4] Pole 2 angle (radians); deviation from the vertical. Positive is clockwise.
+             [5] Pole 2 angular velocity (radians/s). Positive is clockwise.
+            </remarks>
+        </member>
+        <member name="M:SharpNeat.Tasks.CartPole.DoublePole.CartDoublePolePhysicsRK4.ResetState(System.Single,System.Single,System.Single)">
+            <summary>
+            Reset model state.
+            </summary>
+            <param name="cartPos">Cart position on the track.</param>
+            <param name="poleAngle1">Pole 1 angle in radians.</param>
+            <param name="poleAngle2">Pole 2 angle in radians.</param>
+        </member>
+        <member name="M:SharpNeat.Tasks.CartPole.DoublePole.CartDoublePolePhysicsRK4.Update(System.Single)">
+            <summary>
+            Update the model state. I.e. move the state forward by one timestep.
+            </summary>
+            <param name="f">The external horizontal force applied to the cart.</param>
+            <remarks>This implementation of Update() uses classic 4th order Runge-Kutta;  this is considerably more
+            accurate that Euler's method or 2nd order Runge-Kutta for a given timestep size.</remarks>
+        </member>
+        <member name="M:SharpNeat.Tasks.CartPole.DoublePole.CartDoublePolePhysicsRK4.CalcAccelerations(System.Single[],System.Single,System.Single@,System.Single@,System.Single@)">
+            <summary>
+            Calculate cart acceleration, and pole angular acceleration for a given model state and external horizontal force applied to the cart.
+            </summary>
+            <param name="state">The cart-pole model state. The model state variables are:
+             [0] x-axis coordinate of the cart (metres).
+             [1] x-axis velocity of the cart (m/s).
+             [2] Pole 1 angle (radians). Clockwise deviation from the vertical.
+             [3] Pole 1 angular velocity (radians/s). Positive is clockwise.
+             [4] Pole 2 angle (radians). Clockwise deviation from the vertical.
+             [5] Pole 2 angular velocity (radians/s). Positive is clockwise.
+            </param>
+            <param name="f">The external horizontal force applied to the cart.</param>
+            <param name="xa">Returns the cart's horizontal acceleration.</param>
+            <param name="thetaa1">Returns pole 1's angular acceleration.</param>
+            <param name="thetaa2">Returns pole 2's angular acceleration.</param>
+        </member>
+        <member name="M:SharpNeat.Tasks.CartPole.DoublePole.CartDoublePolePhysicsRK4.MultiplyAdd(System.Single[],System.Single[],System.Single[],System.Single)">
+            <summary>
+            Fused multiply-add.
+            </summary>
+            <param name="dest">Destination array. The results are stored in this array.</param>
+            <param name="add">The elements in this array are pointwise added to the destination array.</param>
+            <param name="a">An array to multiply by a scalar.</param>
+            <param name="scalar">A scalar to multiply array a by.</param>
+        </member>
+        <member name="T:SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluationScheme">
+            <summary>
+            Evaluation scheme for the cart and pole balancing task, with a single pole.
+            </summary>
+        </member>
+        <member name="P:SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluationScheme.InputCount">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluationScheme.OutputCount">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluationScheme.IsDeterministic">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluationScheme.FitnessComparer">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluationScheme.NullFitness">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluationScheme.EvaluatorsHaveState">
+            <inheritdoc/>
+        </member>
+        <member name="M:SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluationScheme.CreateEvaluator">
+            <inheritdoc/>
+        </member>
+        <member name="M:SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluationScheme.TestForStopCondition(SharpNeat.Evaluation.FitnessInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="T:SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluator">
+            <summary>
+            Evaluator for the cart and single pole balancing task.
+            </summary>
+        </member>
+        <member name="M:SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluator.#ctor">
+            <summary>
+            Construct evaluator with default task arguments/variables.
+            </summary>
+            <remarks>
+            Default to 960 timesteps, or 960/16 = 60 seconds of clock time.</remarks>
+        </member>
+        <member name="M:SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluator.#ctor(System.Int32)">
+            <summary>
+            Construct evaluator with the provided task arguments/variables.
+            </summary>
+            <param name="maxTimesteps">The maximum number of timesteps to run the physics simulation for.</param>
+        </member>
+        <member name="M:SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluator.Evaluate(SharpNeat.IBlackBox{System.Double})">
+            <summary>
+            Evaluate the provided black box against the cart and single pole balancing task,
+            and return its fitness score.
+            </summary>
+            <param name="box">The black box to evaluate.</param>
+            <returns>A new instance of <see cref="T:SharpNeat.Evaluation.FitnessInfo"/>.</returns>
+        </member>
+        <member name="M:SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluator.RunTrial(SharpNeat.IBlackBox{System.Double},System.Single,System.Single)">
+            <summary>
+            Run a single cart-pole simulation/trial on the given black box, and with the given initial model state.
+            </summary>
+            <param name="box">The black box (neural net) to evaluate.</param>
+            <param name="cartPos">Cart position on the track.</param>
+            <param name="poleAngle">Pole angle in radians.</param>
+            <returns>Fitness score.</returns>
+        </member>
+        <member name="T:SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleExperimentFactory">
+            <summary>
+            A factory for creating instances of <see cref="T:SharpNeat.Experiments.INeatExperiment`1"/> for the cart and single pole balancing task.
+            </summary>
+        </member>
+        <member name="P:SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleExperimentFactory.Id">
+            <inheritdoc/>
+        </member>
+        <member name="M:SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleExperimentFactory.CreateExperiment(System.IO.Stream)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleExperimentFactory.CreateExperimentSinglePrecision(System.IO.Stream)">
+            <inheritdoc/>
+        </member>
+        <member name="T:SharpNeat.Tasks.CartPole.SinglePole.CartSinglePolePhysicsRK4">
+            <summary>
+            Represents the cart-pole physical model (with a single pole); providing a model state update method
+            that employs a classic 4th order Runge-Kutta to project to the state at the next timestep.
+            </summary>
+            <remarks>
+            This cart-pole physics code is based on code from https://github.com/colgreen/cartpole-physics
+            which in turn is based on the cart-pole equations from this paper:
+               "Equations of Motion for the Cart and Pole Control Task"
+               <see href="https://sharpneat.sourceforge.io/research/cart-pole/cart-pole-equations.html"/>.
+            </remarks>
+        </member>
+        <member name="F:SharpNeat.Tasks.CartPole.SinglePole.CartSinglePolePhysicsRK4.g">
+            <summary>
+            Gravitational acceleration (in m/s^2). Here g is taken to be the directionless magnitude of the acceleration
+            caused by gravity (i.e. approximately 9.8 m/s^2 for gravity on Earth). The direction of gravitational acceleration
+            is taken into account in the formulation of the equations, therefore the sign of g is positive.
+            </summary>
+        </member>
+        <member name="F:SharpNeat.Tasks.CartPole.SinglePole.CartSinglePolePhysicsRK4.m">
+            <summary>
+            Mass of the pole (in kilograms).
+            </summary>
+        </member>
+        <member name="F:SharpNeat.Tasks.CartPole.SinglePole.CartSinglePolePhysicsRK4.m_c">
+            <summary>
+            Mass of the cart (in kilograms).
+            </summary>
+        </member>
+        <member name="F:SharpNeat.Tasks.CartPole.SinglePole.CartSinglePolePhysicsRK4.l">
+            <summary>
+            Length of the pole (in metres). This is the full length of the pole, and not the half length as used widely
+            elsewhere in the literature.
+            </summary>
+        </member>
+        <member name="F:SharpNeat.Tasks.CartPole.SinglePole.CartSinglePolePhysicsRK4.l_hat">
+            <summary>
+            Half of the pole's length.
+            </summary>
+        </member>
+        <member name="F:SharpNeat.Tasks.CartPole.SinglePole.CartSinglePolePhysicsRK4.mu_p">
+            <summary>
+            Coefficient of friction between the pole and the cart, i.e. friction at the pole's pivot joint.
+            </summary>
+        </member>
+        <member name="F:SharpNeat.Tasks.CartPole.SinglePole.CartSinglePolePhysicsRK4.mu_c">
+            <summary>
+            Coefficient of friction between the cart and the track.
+            </summary>
+        </member>
+        <member name="F:SharpNeat.Tasks.CartPole.SinglePole.CartSinglePolePhysicsRK4.M">
+            <summary>
+            Combined mass of the cart and the pole.
+            </summary>
+        </member>
+        <member name="F:SharpNeat.Tasks.CartPole.SinglePole.CartSinglePolePhysicsRK4.tau">
+            <summary>
+            The timestep increment, e.g. 0.01 for 10 millisecond increments.
+            </summary>
+        </member>
+        <member name="F:SharpNeat.Tasks.CartPole.SinglePole.CartSinglePolePhysicsRK4._state">
+            <summary>
+            The model state variables are:
+             [0] x-axis coordinate of the cart (metres).
+             [1] x-axis velocity of the cart (m/s).
+             [2] Pole angle (radians); deviation from the vertical. Positive is clockwise.
+             [3] Pole angular velocity (radians/s). Positive is clockwise.
+            </summary>
+        </member>
+        <member name="P:SharpNeat.Tasks.CartPole.SinglePole.CartSinglePolePhysicsRK4.State">
+            <summary>
+            Get the cart-pole model state.
+            </summary>
+            <remarks>
+            The model state variables are:
+             [0] x-axis coordinate of the cart (metres).
+             [1] x-axis velocity of the cart (m/s).
+             [2] Pole angle (radians); deviation from the vertical. Positive is clockwise.
+             [3] Pole angular velocity (radians/s). Positive is clockwise.
+            </remarks>
+        </member>
+        <member name="M:SharpNeat.Tasks.CartPole.SinglePole.CartSinglePolePhysicsRK4.ResetState(System.Single,System.Single)">
+            <summary>
+            Reset model state.
+            </summary>
+            <param name="cartPos">Cart position on the track.</param>
+            <param name="poleAngle">Pole angle in radians.</param>
+        </member>
+        <member name="M:SharpNeat.Tasks.CartPole.SinglePole.CartSinglePolePhysicsRK4.Update(System.Single)">
+            <summary>
+            Update the model state. I.e. move the state forward by one timestep.
+            </summary>
+            <param name="f">The external horizontal force applied to the cart.</param>
+            <remarks>This implementation of Update() uses classic 4th order Runge-Kutta;  this is considerably more
+            accurate that Euler's method or 2nd order Runge-Kutta for a given timestep size.</remarks>
+        </member>
+        <member name="M:SharpNeat.Tasks.CartPole.SinglePole.CartSinglePolePhysicsRK4.CalcAccelerations(System.Single[],System.Single,System.Single@,System.Single@)">
+            <summary>
+            Calculate cart acceleration, and pole angular acceleration for a given model state and external horizontal force applied to the cart.
+            </summary>
+            <param name="state">The cart-pole model state.</param>
+            <param name="f">The external horizontal force applied to the cart.</param>
+            <param name="xa">Returns the cart's horizontal acceleration.</param>
+            <param name="thetaa">Returns the pole's angular acceleration.</param>
+        </member>
+        <member name="M:SharpNeat.Tasks.CartPole.SinglePole.CartSinglePolePhysicsRK4.MultiplyAdd(System.Single[],System.Single[],System.Single[],System.Single)">
+            <summary>
+            Fused multiply-add.
+            </summary>
+            <param name="dest">Destination array. The results are stored in this array.</param>
+            <param name="add">The elements in this array are pointwise added to the destination array.</param>
+            <param name="a">An array to multiply by a scalar.</param>
+            <param name="scalar">A scalar to multiply array a by.</param>
+        </member>
+        <member name="T:SharpNeat.Tasks.FunctionRegression.BlackBoxProbe">
+            <summary>
+            For probing and recording the responses of instances of <see cref="T:SharpNeat.IBlackBox`1"/>.
+            </summary>
+        </member>
+        <member name="M:SharpNeat.Tasks.FunctionRegression.BlackBoxProbe.#ctor(SharpNeat.Tasks.FunctionRegression.ParamSamplingInfo,System.Double,System.Double)">
+            <summary>
+            Construct a new instance.
+            </summary>
+            <param name="paramSamplingInfo">Parameter sampling info.</param>
+            <param name="offset">Offset to apply to each neural network output response.</param>
+            <param name="scale">Scaling factor to apply to each neural network output response.</param>
+        </member>
+        <member name="M:SharpNeat.Tasks.FunctionRegression.BlackBoxProbe.Probe(SharpNeat.IBlackBox{System.Double},System.Double[])">
+            <inheritdoc/>
+        </member>
+        <member name="T:SharpNeat.Tasks.FunctionRegression.FuncRegressionEvaluationScheme">
+            <summary>
+            Evaluation scheme for the function regression task.
+            </summary>
+        </member>
+        <member name="P:SharpNeat.Tasks.FunctionRegression.FuncRegressionEvaluationScheme.InputCount">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.FunctionRegression.FuncRegressionEvaluationScheme.OutputCount">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.FunctionRegression.FuncRegressionEvaluationScheme.IsDeterministic">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.FunctionRegression.FuncRegressionEvaluationScheme.FitnessComparer">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.FunctionRegression.FuncRegressionEvaluationScheme.NullFitness">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.FunctionRegression.FuncRegressionEvaluationScheme.EvaluatorsHaveState">
+            <inheritdoc/>
+        </member>
+        <member name="M:SharpNeat.Tasks.FunctionRegression.FuncRegressionEvaluationScheme.#ctor(System.Func{System.Double,System.Double},SharpNeat.Tasks.FunctionRegression.ParamSamplingInfo,System.Double)">
+            <summary>
+            Construct a new instance.
+            </summary>
+            <param name="fn">The target function.</param>
+            <param name="paramSamplingInfo">Sampling (defines the x range and sampling density).</param>
+            <param name="gradientMseWeight">The fitness weighting to assign to the gradient mean squared error (MSE) score.</param>
+        </member>
+        <member name="M:SharpNeat.Tasks.FunctionRegression.FuncRegressionEvaluationScheme.CreateEvaluator">
+            <inheritdoc/>
+        </member>
+        <member name="M:SharpNeat.Tasks.FunctionRegression.FuncRegressionEvaluationScheme.TestForStopCondition(SharpNeat.Evaluation.FitnessInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="T:SharpNeat.Tasks.FunctionRegression.FuncRegressionEvaluator">
+             <summary>
+             Evaluator for the Function Regression task.
+            
+             One continuous valued input maps to one continuous valued output.
+            
+             Evaluation consists of querying the provided black box for a number of distinct values over the range of the
+             continuous valued input, and comparing the black box response with the expected/correct response.
+             </summary>
+        </member>
+        <member name="M:SharpNeat.Tasks.FunctionRegression.FuncRegressionEvaluator.#ctor(SharpNeat.Tasks.FunctionRegression.ParamSamplingInfo,System.Double,System.Double[],System.Double[],SharpNeat.Tasks.FunctionRegression.IBlackBoxProbe)">
+            <summary>
+            Construct a new instance.
+            </summary>
+            <param name="paramSamplingInfo">Parameter sampling info.</param>
+            <param name="gradientMseWeight">Fitness weighting to apply to the gradient fitness score.</param>
+            <param name="yArrTarget">Array of target y values (function output values).</param>
+            <param name="gradientArrTarget">Array of target gradient values.</param>
+            <param name="blackBoxProbe">Black box probe. For obtaining the y value response array from an instance of <see cref="T:SharpNeat.IBlackBox`1"/>.</param>
+        </member>
+        <member name="M:SharpNeat.Tasks.FunctionRegression.FuncRegressionEvaluator.Evaluate(SharpNeat.IBlackBox{System.Double})">
+            <summary>
+            Evaluate the provided black box against the function regression task,
+            and return its fitness score.
+            </summary>
+            <param name="box">The black box to evaluate.</param>
+            <returns>A new instance of <see cref="T:SharpNeat.Evaluation.FitnessInfo"/>.</returns>
+        </member>
+        <member name="T:SharpNeat.Tasks.FunctionRegression.FuncRegressionUtils">
+            <summary>
+            Static utility methods related to the function regression family of tasks.
+            </summary>
+        </member>
+        <member name="M:SharpNeat.Tasks.FunctionRegression.FuncRegressionUtils.Probe(System.Func{System.Double,System.Double},SharpNeat.Tasks.FunctionRegression.ParamSamplingInfo,System.Double[])">
+            <summary>
+            Probe the given function by taking samples of it at a number of discrete sample points.
+            </summary>
+            <param name="fn">The function to probe/sample.</param>
+            <param name="paramSamplingInfo">Sampling metadata.</param>
+            <param name="responseArr">An array to store the sample results within.</param>
+        </member>
+        <member name="M:SharpNeat.Tasks.FunctionRegression.FuncRegressionUtils.CalcGradients(SharpNeat.Tasks.FunctionRegression.ParamSamplingInfo,System.Double[],System.Double[])">
+            <summary>
+            Calculate an approximate gradient of a given function, at a number of discrete sample points.
+            </summary>
+            <param name="paramSamplingInfo">Sampling metadata.</param>
+            <param name="yArr">The function output/result at a number of discrete sample points.</param>
+            <param name="gradientArr">An array to store the calculated gradients within.</param>
+        </member>
+        <member name="M:SharpNeat.Tasks.FunctionRegression.FuncRegressionUtils.CalcFunctionMidAndScale(System.Func{System.Double,System.Double},SharpNeat.Tasks.FunctionRegression.ParamSamplingInfo,System.Double@,System.Double@)">
+            <summary>
+            Determine the mid output value of the function (over the specified sample points) and a scaling factor
+            to apply the to neural network response for it to be able to recreate the function (because the neural net
+            output range is [0,1] when using the logistic function as the neuron activation function).
+            </summary>
+            <param name="fn">The function to be sampled.</param>
+            <param name="paramSamplingInfo">Parameter sampling info.</param>
+            <param name="mid">Returns the mid value of the function (halfway between min and max).</param>
+            <param name="scale">Returns the scale of the function.</param>
+        </member>
+        <member name="T:SharpNeat.Tasks.FunctionRegression.FunctionFactory">
+            <summary>
+            Static factory methods for creating functions for the function regression task.
+            </summary>
+        </member>
+        <member name="M:SharpNeat.Tasks.FunctionRegression.FunctionFactory.GetFunction(SharpNeat.Tasks.FunctionRegression.FunctionId)">
+            <summary>
+            Get an instance of <see cref="T:System.Func`2"/> for the specified function type.
+            </summary>
+            <param name="fnId">Function ID.</param>
+            <returns>An instance of <see cref="T:System.Func`2"/>.</returns>
+        </member>
+        <member name="T:SharpNeat.Tasks.FunctionRegression.FunctionId">
+            <summary>
+            Enumeration of function IDs for the function regression task.
+            </summary>
+        </member>
+        <member name="F:SharpNeat.Tasks.FunctionRegression.FunctionId.Abs">
+            <summary>
+            Absolute value function.
+            </summary>
+        </member>
+        <member name="F:SharpNeat.Tasks.FunctionRegression.FunctionId.Log">
+            <summary>
+            Logarithm function.
+            </summary>
+        </member>
+        <member name="F:SharpNeat.Tasks.FunctionRegression.FunctionId.Sin">
+            <summary>
+            Sine function.
+            </summary>
+        </member>
+        <member name="F:SharpNeat.Tasks.FunctionRegression.FunctionId.BeatSinewave">
+            <summary>
+            The sum of two sine waves with different periods.
+            </summary>
+        </member>
+        <member name="F:SharpNeat.Tasks.FunctionRegression.FunctionId.SinXSquared">
+            <summary>
+            Sin(x^2) function.
+            </summary>
+        </member>
+        <member name="F:SharpNeat.Tasks.FunctionRegression.FunctionId.Waveform1">
+            <summary>
+            Custom waveform #1 function.
+            </summary>
+        </member>
+        <member name="T:SharpNeat.Tasks.FunctionRegression.IBlackBoxProbe">
+            <summary>
+            For probing and recording the responses of instances of <see cref="T:SharpNeat.IBlackBox`1"/>.
+            </summary>
+        </member>
+        <member name="M:SharpNeat.Tasks.FunctionRegression.IBlackBoxProbe.Probe(SharpNeat.IBlackBox{System.Double},System.Double[])">
+            <summary>
+            Probe the given black box, and record the responses in <paramref name="responseArr"/>.
+            </summary>
+            <param name="box">The black box to probe.</param>
+            <param name="responseArr">Response array.</param>
+        </member>
+        <member name="T:SharpNeat.Tasks.FunctionRegression.ParamSamplingInfo">
+            <summary>
+            Parameter sampling info.
+            Describes the value range to sample, the number of samples within that range, and the increment between samples.
+            </summary>
+        </member>
+        <member name="P:SharpNeat.Tasks.FunctionRegression.ParamSamplingInfo.Min">
+            <summary>
+            Sample interval minimum.
+            </summary>
+        </member>
+        <member name="P:SharpNeat.Tasks.FunctionRegression.ParamSamplingInfo.Max">
+            <summary>
+            Sample interval maximum.
+            </summary>
+        </member>
+        <member name="P:SharpNeat.Tasks.FunctionRegression.ParamSamplingInfo.Incr">
+            <summary>
+            Intra sample increment.
+            </summary>
+        </member>
+        <member name="P:SharpNeat.Tasks.FunctionRegression.ParamSamplingInfo.SampleResolution">
+            <summary>
+            Sampling resolution, within the defined min-max interval.
+            </summary>
+        </member>
+        <member name="P:SharpNeat.Tasks.FunctionRegression.ParamSamplingInfo.XArr">
+            <summary>
+            X positions of the sample points.
+            </summary>
+        </member>
+        <member name="P:SharpNeat.Tasks.FunctionRegression.ParamSamplingInfo.XArrNetwork">
+            <summary>
+            X positions of the sample points in the neural net input space (i.e. scaled from 0 to 1).
+            </summary>
+        </member>
+        <member name="M:SharpNeat.Tasks.FunctionRegression.ParamSamplingInfo.#ctor(System.Double,System.Double,System.Int32)">
+            <summary>
+            Construct with the provided parameter sampling info.
+            </summary>
+            <param name="min">Sample interval minimum.</param>
+            <param name="max">Sample interval maximum.</param>
+            <param name="resolution">Sampling resolution.</param>
+        </member>
+        <member name="T:SharpNeat.Tasks.GenerativeFunctionRegression.ConfigModels.GenerativeFnRegressionCustomConfig">
+            <summary>
+            Model type for generative function regression custom config section.
+            </summary>
+        </member>
+        <member name="P:SharpNeat.Tasks.GenerativeFunctionRegression.ConfigModels.GenerativeFnRegressionCustomConfig.FunctionId">
+            <summary>
+            Function ID. E.g. "Sin", "Cos", etc.
+            </summary>
+        </member>
+        <member name="P:SharpNeat.Tasks.GenerativeFunctionRegression.ConfigModels.GenerativeFnRegressionCustomConfig.SampleIntervalMin">
+            <summary>
+            Sample interval minimum.
+            </summary>
+        </member>
+        <member name="P:SharpNeat.Tasks.GenerativeFunctionRegression.ConfigModels.GenerativeFnRegressionCustomConfig.SampleIntervalMax">
+            <summary>
+            Sample interval maximum.
+            </summary>
+        </member>
+        <member name="P:SharpNeat.Tasks.GenerativeFunctionRegression.ConfigModels.GenerativeFnRegressionCustomConfig.SampleResolution">
+            <summary>
+            Sampling resolution, within the defined min-max interval.
+            </summary>
+        </member>
+        <member name="P:SharpNeat.Tasks.GenerativeFunctionRegression.ConfigModels.GenerativeFnRegressionCustomConfig.GradientMseWeight">
+            <summary>
+            The fitness weighting to assign to the gradient mean squared error (MSE) score.
+            </summary>
+        </member>
+        <member name="T:SharpNeat.Tasks.GenerativeFunctionRegression.ConfigModels.GenerativeFnRegressionExperimentConfig">
+            <summary>
+            Model type for generative function regression experiment configuration.
+            </summary>
+        </member>
+        <member name="P:SharpNeat.Tasks.GenerativeFunctionRegression.ConfigModels.GenerativeFnRegressionExperimentConfig.CustomEvaluationSchemeConfig">
+            <summary>
+            Custom config for the generative function regression experiment.
+            </summary>
+        </member>
+        <member name="T:SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeBlackBoxProbe">
+            <summary>
+            For probing and recording the responses of instances of <see cref="T:SharpNeat.IBlackBox`1"/>.
+            </summary>
+        </member>
+        <member name="M:SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeBlackBoxProbe.#ctor(System.Int32,System.Double,System.Double)">
+            <summary>
+            Construct a new instance.
+            </summary>
+            <param name="sampleCount">The number of generative samples to take.</param>
+            <param name="offset">Offset to apply to each black box output response.</param>
+            <param name="scale">Scaling factor to apply to each black box output response.</param>
+        </member>
+        <member name="M:SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeBlackBoxProbe.Probe(SharpNeat.IBlackBox{System.Double},System.Double[])">
+            <inheritdoc/>
+        </member>
+        <member name="T:SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme">
+            <summary>
+            Evaluation scheme for the function regression task.
+            </summary>
+        </member>
+        <member name="P:SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme.InputCount">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme.OutputCount">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme.IsDeterministic">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme.FitnessComparer">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme.NullFitness">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme.EvaluatorsHaveState">
+            <inheritdoc/>
+        </member>
+        <member name="M:SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme.#ctor(System.Func{System.Double,System.Double},SharpNeat.Tasks.FunctionRegression.ParamSamplingInfo,System.Double)">
+            <summary>
+            Construct a new instance.
+            </summary>
+            <param name="fn">The target function.</param>
+            <param name="paramSamplingInfo">Sampling (defines the x range and sampling density).</param>
+            <param name="gradientMseWeight">The fitness weighting to assign to the gradient mean squared error (MSE) score.</param>
+        </member>
+        <member name="M:SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme.CreateEvaluator">
+            <inheritdoc/>
+        </member>
+        <member name="M:SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme.TestForStopCondition(SharpNeat.Evaluation.FitnessInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="T:SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionExperimentFactory">
+            <summary>
+            A factory for creating instances of <see cref="T:SharpNeat.Experiments.INeatExperiment`1"/> for the generative sinewave task.
+            </summary>
+        </member>
+        <member name="P:SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionExperimentFactory.Id">
+            <inheritdoc/>
+        </member>
+        <member name="M:SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionExperimentFactory.CreateExperiment(System.IO.Stream)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionExperimentFactory.CreateExperimentSinglePrecision(System.IO.Stream)">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.Gymnasium.GymnasiumEvaluationScheme.InputCount">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.Gymnasium.GymnasiumEvaluationScheme.OutputCount">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.Gymnasium.GymnasiumEvaluationScheme.IsDeterministic">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.Gymnasium.GymnasiumEvaluationScheme.FitnessComparer">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.Gymnasium.GymnasiumEvaluationScheme.NullFitness">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.Gymnasium.GymnasiumEvaluationScheme.EvaluatorsHaveState">
+            <inheritdoc/>
+        </member>
+        <member name="M:SharpNeat.Tasks.Gymnasium.GymnasiumEvaluationScheme.CreateEvaluator">
+            <inheritdoc/>
+        </member>
+        <member name="M:SharpNeat.Tasks.Gymnasium.GymnasiumEvaluationScheme.TestForStopCondition(SharpNeat.Evaluation.FitnessInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.Gymnasium.GymnasiumExperimentFactory.Id">
+            <inheritdoc/>
+        </member>
+        <member name="M:SharpNeat.Tasks.Gymnasium.GymnasiumExperimentFactory.CreateExperiment(System.IO.Stream)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SharpNeat.Tasks.Gymnasium.GymnasiumExperimentFactory.CreateExperimentSinglePrecision(System.IO.Stream)">
+            <inheritdoc/>
+        </member>
+        <member name="T:SharpNeat.Tasks.PreyCapture.ConfigModels.PreyCaptureCustomConfig">
+            <summary>
+            Model type for prey capture custom config section.
+            </summary>
+        </member>
+        <member name="P:SharpNeat.Tasks.PreyCapture.ConfigModels.PreyCaptureCustomConfig.PreyInitMoves">
+            <summary>
+            Prey initial moves. The number of moves the prey is allowed to move before the agent can move.
+            </summary>
+        </member>
+        <member name="P:SharpNeat.Tasks.PreyCapture.ConfigModels.PreyCaptureCustomConfig.PreySpeed">
+            <summary>
+            Prey speed; in the interval [0, 1].
+            </summary>
+        </member>
+        <member name="P:SharpNeat.Tasks.PreyCapture.ConfigModels.PreyCaptureCustomConfig.SensorRange">
+            <summary>
+            The sensor range of the agent.
+            </summary>
+        </member>
+        <member name="P:SharpNeat.Tasks.PreyCapture.ConfigModels.PreyCaptureCustomConfig.MaxTimesteps">
+            <summary>
+            The maximum number of simulation timesteps to run without the agent capturing the prey.
+            </summary>
+        </member>
+        <member name="P:SharpNeat.Tasks.PreyCapture.ConfigModels.PreyCaptureCustomConfig.TrialsPerEvaluation">
+            <summary>
+            The number of prey capture trials to run per evaluation.
+            </summary>
+        </member>
+        <member name="T:SharpNeat.Tasks.PreyCapture.ConfigModels.PreyCaptureExperimentConfig">
+            <summary>
+            Model type for prey capture experiment configuration.
+            </summary>
+        </member>
+        <member name="P:SharpNeat.Tasks.PreyCapture.ConfigModels.PreyCaptureExperimentConfig.CustomEvaluationSchemeConfig">
+            <summary>
+            Custom config for the prey capture experiment.
+            </summary>
+        </member>
+        <member name="T:SharpNeat.Tasks.PreyCapture.Int32Point">
+            <summary>
+            An integer Cartesian coordinate.
+            </summary>
+        </member>
+        <member name="F:SharpNeat.Tasks.PreyCapture.Int32Point.X">
+            <summary>
+            The x-axis coordinate.
+            </summary>
+        </member>
+        <member name="F:SharpNeat.Tasks.PreyCapture.Int32Point.Y">
+            <summary>
+            The y-axis coordinate.
+            </summary>
+        </member>
+        <member name="M:SharpNeat.Tasks.PreyCapture.Int32Point.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Construct with the provided Cartesian coordinate components.
+            </summary>
+            <param name="x">The x-axis coordinate.</param>
+            <param name="y">The y-axis coordinate.</param>
+        </member>
+        <member name="M:SharpNeat.Tasks.PreyCapture.Int32Point.Equals(System.Object)">
+            <summary>
+            Determines whether the specified object is equal to the current <see cref="T:SharpNeat.Tasks.PreyCapture.Int32Point" />.
+            </summary>
+            <param name="obj">The object to compare with the current object.</param>
+            <returns>true if the objects are equal; otherwise false.</returns>
+        </member>
+        <member name="M:SharpNeat.Tasks.PreyCapture.Int32Point.GetHashCode">
+            <summary>
+            Get the hash code for the current object.
+            </summary>
+            <returns>The current object's hash code.</returns>
+        </member>
+        <member name="M:SharpNeat.Tasks.PreyCapture.Int32Point.op_Equality(SharpNeat.Tasks.PreyCapture.Int32Point,SharpNeat.Tasks.PreyCapture.Int32Point)">
+            <summary>
+            Determines whether two <see cref="T:SharpNeat.Tasks.PreyCapture.Int32Point"/>s have the same value.
+            </summary>
+            <param name="a">The first <see cref="T:SharpNeat.Tasks.PreyCapture.Int32Point"/> to compare.</param>
+            <param name="b">The second <see cref="T:SharpNeat.Tasks.PreyCapture.Int32Point"/> to compare.</param>
+            <returns>true if the two <see cref="T:SharpNeat.Tasks.PreyCapture.Int32Point"/>s are equal; otherwise false.</returns>
+        </member>
+        <member name="M:SharpNeat.Tasks.PreyCapture.Int32Point.op_Inequality(SharpNeat.Tasks.PreyCapture.Int32Point,SharpNeat.Tasks.PreyCapture.Int32Point)">
+            <summary>
+            Determines whether two <see cref="T:SharpNeat.Tasks.PreyCapture.Int32Point"/>s have a different value.
+            </summary>
+            <param name="a">The first <see cref="T:SharpNeat.Tasks.PreyCapture.Int32Point"/> to compare.</param>
+            <param name="b">The second <see cref="T:SharpNeat.Tasks.PreyCapture.Int32Point"/> to compare.</param>
+            <returns>true if the two <see cref="T:SharpNeat.Tasks.PreyCapture.Int32Point"/>s are different; otherwise false.</returns>
+        </member>
+        <member name="M:SharpNeat.Tasks.PreyCapture.Int32Point.op_Subtraction(SharpNeat.Tasks.PreyCapture.Int32Point,SharpNeat.Tasks.PreyCapture.Int32Point)">
+            <summary>
+            Subtract point b from point a, using pointwise subtraction of the point coordinates.
+            </summary>
+            <param name="a">The <see cref="T:SharpNeat.Tasks.PreyCapture.Int32Point"/> to subtract from.</param>
+            <param name="b">The <see cref="T:SharpNeat.Tasks.PreyCapture.Int32Point"/> to subtract from point a.</param>
+            <returns>The result of the subtraction.</returns>
+        </member>
+        <member name="M:SharpNeat.Tasks.PreyCapture.Int32Point.CalculateDistance(SharpNeat.Tasks.PreyCapture.Int32Point,SharpNeat.Tasks.PreyCapture.Int32Point)">
+            <summary>
+            Calculate Euclidean distance between two points.
+            </summary>
+            <param name="a">Point A.</param>
+            <param name="b">Point B.</param>
+            <returns>The Euclidean distance between the two points.</returns>
+        </member>
+        <member name="M:SharpNeat.Tasks.PreyCapture.Int32Point.CalculateDistance(SharpNeat.Tasks.PreyCapture.Int32Point,System.Int32,System.Int32)">
+            <summary>
+            Calculate Euclidean distance between two points.
+            </summary>
+            <param name="a">Point A.</param>
+            <param name="x">Point B x coordinate.</param>
+            <param name="y">Point B y coordinate.</param>
+            <returns>The Euclidean distance between the two points.</returns>
+        </member>
+        <member name="T:SharpNeat.Tasks.PreyCapture.PreyCaptureEvaluationScheme">
+            <summary>
+            Evaluation scheme for the prey capture task.
+            </summary>
+        </member>
+        <member name="P:SharpNeat.Tasks.PreyCapture.PreyCaptureEvaluationScheme.InputCount">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.PreyCapture.PreyCaptureEvaluationScheme.OutputCount">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.PreyCapture.PreyCaptureEvaluationScheme.IsDeterministic">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.PreyCapture.PreyCaptureEvaluationScheme.FitnessComparer">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.PreyCapture.PreyCaptureEvaluationScheme.NullFitness">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.PreyCapture.PreyCaptureEvaluationScheme.EvaluatorsHaveState">
+            <inheritdoc/>
+        </member>
+        <member name="M:SharpNeat.Tasks.PreyCapture.PreyCaptureEvaluationScheme.#ctor(System.Int32,System.Single,System.Single,System.Int32,System.Int32)">
+            <summary>
+            Construct with the provided task and evaluator parameters.
+            </summary>
+            <param name="preyInitMoves">Prey initial moves. The number of moves the prey is allowed to move before the agent can move.</param>
+            <param name="preySpeed">Prey speed; in the interval [0, 1].</param>
+            <param name="sensorRange">The sensor range of the agent.</param>
+            <param name="maxTimesteps">The maximum number of simulation timesteps to run without the agent capturing the prey.</param>
+            <param name="trialsPerEvaluation">The number of prey capture trials to run per evaluation.</param>
+        </member>
+        <member name="M:SharpNeat.Tasks.PreyCapture.PreyCaptureEvaluationScheme.CreateEvaluator">
+            <inheritdoc/>
+        </member>
+        <member name="M:SharpNeat.Tasks.PreyCapture.PreyCaptureEvaluationScheme.TestForStopCondition(SharpNeat.Evaluation.FitnessInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="T:SharpNeat.Tasks.PreyCapture.PreyCaptureEvaluator">
+            <summary>
+            Evaluator for the prey capture task.
+            </summary>
+        </member>
+        <member name="M:SharpNeat.Tasks.PreyCapture.PreyCaptureEvaluator.#ctor(System.Int32,System.Single,System.Single,System.Int32,System.Int32)">
+            <summary>
+            Construct with the provided task and evaluator parameters.
+            </summary>
+            <param name="preyInitMoves">Prey initial moves. The number of moves the prey is allowed to move before the agent can move.</param>
+            <param name="preySpeed">Prey speed; in the interval [0, 1].</param>
+            <param name="sensorRange">The sensor range of the agent.</param>
+            <param name="maxTimesteps">The maximum number of simulation timesteps to run without the agent capturing the prey.</param>
+            <param name="trialsPerEvaluation">The number of prey capture trials to run per evaluation.</param>
+        </member>
+        <member name="M:SharpNeat.Tasks.PreyCapture.PreyCaptureEvaluator.Evaluate(SharpNeat.IBlackBox{System.Double})">
+            <summary>
+            Evaluate the provided black box against the prey capture task,
+            and return its fitness score.
+            </summary>
+            <param name="box">The black box to evaluate.</param>
+            <returns>A new instance of <see cref="T:SharpNeat.Evaluation.FitnessInfo"/>.</returns>
+        </member>
+        <member name="T:SharpNeat.Tasks.PreyCapture.PreyCaptureExperimentFactory">
+            <summary>
+            A factory for creating instances of <see cref="T:SharpNeat.Experiments.INeatExperiment`1"/> for the prey capture task.
+            </summary>
+        </member>
+        <member name="P:SharpNeat.Tasks.PreyCapture.PreyCaptureExperimentFactory.Id">
+            <inheritdoc/>
+        </member>
+        <member name="M:SharpNeat.Tasks.PreyCapture.PreyCaptureExperimentFactory.CreateExperiment(System.IO.Stream)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SharpNeat.Tasks.PreyCapture.PreyCaptureExperimentFactory.CreateExperimentSinglePrecision(System.IO.Stream)">
+            <inheritdoc/>
+        </member>
+        <member name="T:SharpNeat.Tasks.PreyCapture.PreyCaptureWorld">
+             <summary>
+             The prey capture task's grid world, as defined in:
+            
+                Incremental Evolution Of Complex General Behavior, Faustino Gomez and Risto Miikkulainen (1997)
+                http://nn.cs.utexas.edu/downloads/papers/gomez.adaptive-behavior.pdf
+            
+             Encapsulates the agent's sensor and motor hardware, and the prey's simple stochastic movement.
+             </summary>
+             <remarks>
+             The grid world's origin, i.e. coordinate (0,0), is at the bottom left of the grid.
+             </remarks>
+        </member>
+        <member name="F:SharpNeat.Tasks.PreyCapture.PreyCaptureWorld.__gridSize">
+            <summary>
+            The length of an edge of the square grid world, measured in grid squares. The minimum possible value here is 9,
+            otherwise the initial position of the agent may be outside of the grid world, and also the agent wall detectors
+            would all be always on.
+            </summary>
+        </member>
+        <member name="M:SharpNeat.Tasks.PreyCapture.PreyCaptureWorld.#ctor(System.Int32,System.Single,System.Single,System.Int32)">
+            <summary>
+            Constructs with the provided world parameter arguments.
+            </summary>
+            <param name="preyInitMoves">Prey initial moves. The number of moves the prey is allowed to move before the agent can move.</param>
+            <param name="preySpeed">Prey speed; in the interval [0, 1].</param>
+            <param name="sensorRange">The sensor range of the agent.</param>
+            <param name="maxTimesteps">The maximum number of simulation timesteps to run without the agent capturing the prey.</param>
+        </member>
+        <member name="P:SharpNeat.Tasks.PreyCapture.PreyCaptureWorld.GridSize">
+            <summary>
+            Gets the size of the square grid, stated as the number length of an edge measured in grid squares.
+            </summary>
+        </member>
+        <member name="P:SharpNeat.Tasks.PreyCapture.PreyCaptureWorld.PreyInitMoves">
+            <summary>
+            Gets the number of moves the prey is allowed to move before the agent can move.
+            </summary>
+        </member>
+        <member name="P:SharpNeat.Tasks.PreyCapture.PreyCaptureWorld.SensorRange">
+            <summary>
+            Gets the sensor range of the agent.
+            </summary>
+        </member>
+        <member name="P:SharpNeat.Tasks.PreyCapture.PreyCaptureWorld.AgentPosition">
+            <summary>
+            Gets the grid square position of the agent.
+            </summary>
+        </member>
+        <member name="P:SharpNeat.Tasks.PreyCapture.PreyCaptureWorld.PreyPosition">
+            <summary>
+            Gets the grid square position of the prey.
+            </summary>
+        </member>
+        <member name="P:SharpNeat.Tasks.PreyCapture.PreyCaptureWorld.MaxTimesteps">
+            <summary>
+            Gets the maximum number of simulation timesteps to run without the agent capturing the prey.
+            </summary>
+        </member>
+        <member name="M:SharpNeat.Tasks.PreyCapture.PreyCaptureWorld.RunTrial(SharpNeat.IBlackBox{System.Double})">
+            <summary>
+            Runs one trial of the provided agent in the world. Returns true if the agent captures the prey within
+            the maximum number of timesteps allowed.
+            </summary>
+            <param name="agent">The agent to run the trail with.</param>
+            <returns>True if the agent captured the prey; otherwise false.</returns>
+        </member>
+        <member name="M:SharpNeat.Tasks.PreyCapture.PreyCaptureWorld.InitPositions">
+            <summary>
+            Initialise agent and prey positions. The prey is positioned randomly with at least 4 empty squares between it and a wall (in all directions).
+            The agent is positioned randomly but such that the prey is within sensor range (distance 2 or less).
+            </summary>
+        </member>
+        <member name="M:SharpNeat.Tasks.PreyCapture.PreyCaptureWorld.SetAgentInputsAndActivate(SharpNeat.IBlackBox{System.Double})">
+            <summary>
+            Determine the agent's position in the world relative to the prey and walls, and set its sensor inputs accordingly.
+            </summary>
+            <param name="agent">The agent.</param>
+        </member>
+        <member name="M:SharpNeat.Tasks.PreyCapture.PreyCaptureWorld.MoveAgent(SharpNeat.IBlackBox{System.Double})">
+            <summary>
+            Allow the agent to move one square based on its decision. Note that the agent can choose to not move.
+            </summary>
+            <param name="agent">The agent.</param>
+        </member>
+        <member name="M:SharpNeat.Tasks.PreyCapture.PreyCaptureWorld.MovePrey">
+            <summary>
+            Move the prey. The prey moves by a simple set of stochastic rules that make it more likely to move away from
+            the agent with increased proximity to the agent.
+            </summary>
+        </member>
+        <member name="M:SharpNeat.Tasks.PreyCapture.PreyCaptureWorld.IsPreyCaptured">
+            <summary>
+            Gets a boolean that indicates if the prey has been captured.
+            </summary>
+            <returns>True if the agent has captured the prey; otherwise false.</returns>
+        </member>
+        <member name="M:SharpNeat.Tasks.PreyCapture.PreyCaptureWorld.T(System.Single)">
+            <summary>
+            The T function as defined in Appendix A of the paper referenced at the top of this class.
+            This is a function on the distance between the agent and the prey, with it's maximum value of 15 when distance is zero,
+            and minimum value of 1.0 when distance is greater than 15.
+            </summary>
+            <param name="distance">Distance between the agent and the prey.</param>
+        </member>
+        <member name="M:SharpNeat.Tasks.PreyCapture.PreyCaptureWorld.W(System.Single,System.Single)">
+            <summary>
+            The W function as defined in Appendix A of the paper referenced at the top of this class.
+            </summary>
+            <param name="angleA">Angle A (radians).</param>
+            <param name="angleB">Angle B (radians).</param>
+        </member>
+        <member name="M:SharpNeat.Tasks.PreyCapture.PreyCaptureWorld.AngleDelta(System.Single,System.Single)">
+            <summary>
+            Gives the smallest angle between two vectors with the given angles.
+            </summary>
+            <param name="a">Vector a angle.</param>
+            <param name="b">Vector b angle.</param>
+            <returns>Smallest angle between a and b.</returns>
+        </member>
+        <member name="M:SharpNeat.Tasks.PreyCapture.PreyCaptureWorld.CartesianToPolar(SharpNeat.Tasks.PreyCapture.Int32Point,System.Int32@,System.Single@)">
+             <summary>
+             Convert the given integer Cartesian coordinate to a polar coordinate.
+             </summary>
+             <param name="p">The integer Cartesian coordinate to convert.</param>
+             <param name="radiusSqr">Returns the square of the radius, as an integer. I.e. the distance from the pole, squared.</param>
+             <param name="azimuth">Returns the azimuth; the anticlockwise angle from the polar axis.</param>
+             <remarks>
+             The radius coordinate is returned as the *square* of the radius. This is because normally we want to compare the radius
+             with some threshold, and it's faster to avoid a square root operation to calculate the radius, and instead to compare
+             squared radii.
+            
+             By convention the polar axis is horizontal and to the right, and a positive azimuth represents an anticlockwise
+             rotation. Therefore an azimuth of zero degrees represents due east (note. this same angle is never represented by
+             +360 degrees), and an angle of +90 degrees represents due north.
+             </remarks>
+        </member>
+        <member name="M:SharpNeat.Tasks.PreyCapture.PreyCaptureWorld.Exp(System.Single)">
+            <summary>
+            Returns e raised to the specified power.
+            </summary>
+            <remarks>
+            This approximate function is customised for use in the prey capture task, and gives reasonable results over the interval [0, 2*PI].
+            As such this function should not be used elsewhere as a general purpose approximation for exp().
+            </remarks>
+            <param name="x">A number specifying a power.</param>
+            <returns>The number e raised to the power x.</returns>
+        </member>
+        <member name="T:SharpNeat.Tasks.Xor.XorEvaluationScheme">
+            <summary>
+            Evaluation scheme for the logical XOR task.
+            </summary>
+        </member>
+        <member name="P:SharpNeat.Tasks.Xor.XorEvaluationScheme.InputCount">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.Xor.XorEvaluationScheme.OutputCount">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.Xor.XorEvaluationScheme.IsDeterministic">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.Xor.XorEvaluationScheme.FitnessComparer">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.Xor.XorEvaluationScheme.NullFitness">
+            <inheritdoc/>
+        </member>
+        <member name="P:SharpNeat.Tasks.Xor.XorEvaluationScheme.EvaluatorsHaveState">
+            <inheritdoc/>
+        </member>
+        <member name="M:SharpNeat.Tasks.Xor.XorEvaluationScheme.CreateEvaluator">
+            <inheritdoc/>
+        </member>
+        <member name="M:SharpNeat.Tasks.Xor.XorEvaluationScheme.TestForStopCondition(SharpNeat.Evaluation.FitnessInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="T:SharpNeat.Tasks.Xor.XorEvaluator">
+             <summary>
+             Evaluator for the logical XOR task.
+            
+             Two inputs supply the two XOR input values.
+            
+             The correct response for the single output is input1 XOR input2.
+            
+             Evaluation consists of querying the provided black box for all possible input combinations (2^2 = 4).
+             </summary>
+        </member>
+        <member name="M:SharpNeat.Tasks.Xor.XorEvaluator.Evaluate(SharpNeat.IBlackBox{System.Double})">
+            <summary>
+            Evaluate the provided black box against the logical XOR task,
+            and return its fitness score.
+            </summary>
+            <param name="box">The black box to evaluate.</param>
+            <returns>A new instance of <see cref="T:SharpNeat.Evaluation.FitnessInfo"/>.</returns>
+        </member>
+        <member name="T:SharpNeat.Tasks.Xor.XorExperimentFactory">
+            <summary>
+            A factory for creating instances of <see cref="T:SharpNeat.Experiments.INeatExperiment`1"/> for the XOR task.
+            </summary>
+        </member>
+        <member name="P:SharpNeat.Tasks.Xor.XorExperimentFactory.Id">
+            <inheritdoc/>
+        </member>
+        <member name="M:SharpNeat.Tasks.Xor.XorExperimentFactory.CreateExperiment(System.IO.Stream)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SharpNeat.Tasks.Xor.XorExperimentFactory.CreateExperimentSinglePrecision(System.IO.Stream)">
+            <inheritdoc/>
+        </member>
+    </members>
+</doc>
