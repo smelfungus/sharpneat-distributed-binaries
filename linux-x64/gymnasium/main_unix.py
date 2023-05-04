@@ -65,27 +65,34 @@ def run_episode():
 
         total_timesteps += 1
 
-        observation, reward, terminated, truncated, info = env.step(a)
-        done = terminated or truncated
+        try:
+            observation, reward, terminated, truncated, info = env.step(a)
 
-        # if reward != 0:
-        #     print("reward %0.3f" % reward)
+            done = terminated or truncated
 
-        total_reward += reward
-        latest_rewards.append(float(reward))
+            # if reward != 0:
+            #     print("reward %0.3f" % reward)
 
-        masked_done = done
+            total_reward += reward
+            latest_rewards.append(float(reward))
 
-        if total_timesteps >= max_reward_history_len:
-            low_performing = True
-            for historical_reward in latest_rewards:
-                if historical_reward > 0:
-                    low_performing = False
-                    break
-            if low_performing:
-                masked_done = True
+            masked_done = done
 
-        if not test:
+            if total_timesteps >= max_reward_history_len:
+                low_performing = True
+                for historical_reward in latest_rewards:
+                    if historical_reward > 0:
+                        low_performing = False
+                        break
+                if low_performing:
+                    masked_done = True
+
+            if not test:
+                send_observation(sock, observation, float(total_reward), masked_done)
+
+        except Exception as env_exception:
+            logging.error(str(env_exception))
+            masked_done = True
             send_observation(sock, observation, float(total_reward), masked_done)
 
         if render:
